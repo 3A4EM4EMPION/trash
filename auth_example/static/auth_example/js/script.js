@@ -26,6 +26,13 @@ $(document).ready(function(){
 		var currentLogin = $('#signup input:text[name=login]').val();
 		var currentPass = $('#signup input:password[name=pass]').val();
 		var currentEmail = $('#signup input:text[name=email]').val();
+
+		var currentFirstName = $('#signup input:text[name=firstName]').val();
+		var currentLastName = $('#signup input:text[name=lastName]').val();
+
+		var currentDateOfBirth = $('#signup input:text[name=dateOfBirth]').val();
+		var currentSex = $('#signup input:text[name=sex]').val();
+
 		$.ajax({
 			url: '/auth/signup/',
 			data: {
