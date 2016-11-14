@@ -32,10 +32,18 @@ def user_logout(request):
 
 def user_signup(request):
 	if request.is_ajax():
-		password = request.GET.get('password', None)
-		login = request.GET.get('login', None)
-		email = request.GET.get('email', None)
-		new_user = User.objects.create_user(username=login, email=email, password=password)
+		users_data = {}
+		users_data['password'] = request.GET.get('password', None)
+		users_data['login'] = request.GET.get('login', None)
+		users_data['email'] = request.GET.get('email', None)
+
+		users_data['first_name'] = request.GET.get('firstName', None)
+		users_data['last_name'] = request.GET.get('lastName', None)
+
+		users_data['date_of_birth'] = request.GET.get('dateOfBirth', None)
+		users_data['sex'] = request.GET.get('sex', None)
+
+		new_user = User.objects.create_user(users_data)
 		if new_user is not None:
 			new_user.save()
 			return HttpResponse('1')

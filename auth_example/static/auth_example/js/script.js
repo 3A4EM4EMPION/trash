@@ -26,12 +26,12 @@ $(document).ready(function(){
 		var currentLogin = $('#signup input:text[name=login]').val();
 		var currentPass = $('#signup input:password[name=pass]').val();
 		var currentEmail = $('#signup input:text[name=email]').val();
-
+        //TODO: end selectors!
 		var currentFirstName = $('#signup input:text[name=firstName]').val();
 		var currentLastName = $('#signup input:text[name=lastName]').val();
 
-		var currentDateOfBirth = $('#signup input:text[name=dateOfBirth]').val();
-		var currentSex = $('#signup input:text[name=sex]').val();
+		var currentDateOfBirth = $('#signup input:date[name=dateOfBirth]').val();
+		var currentSex = $('#signup select:selected').val();
 
 		$.ajax({
 			url: '/auth/signup/',
@@ -39,6 +39,10 @@ $(document).ready(function(){
 					login: currentLogin, 
 					password: currentPass,
 					email: currentEmail,
+					firstName: currentFirstName,
+					lastName: currentLastName,
+					dateOfBirth: currentDateOfBirth,
+					sex: currentSex,
 				},
 			success: function(responce){
 				if(responce){
