@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MATH</title>
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/jquery.js" %}"></script>
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/exercise_second.js" %}"></script>
+</head>
+<body>
+	<main>	
+		<form id="sum" method="POST">
+			{% csrf_token %}
+			<input type="text" name="first_operand">
+			<div class="sum_res">+</div>
+			<input type="text" name="second_operand">
+			<button type="submit">отправить</button>
+		</form>
+		<hr>
+		<form id="dif" method="POST">
+			{% csrf_token %}
+			<input type="text" name="first_operand">
+			<div class="dif_res">-</div>
+			<input type="text" name="second_operand">
+			<input type="submit">
+		</form>
+		<hr>
+		<form id="mult" method="POST">
+			{% csrf_token %}
+			<input type="text" name="first_operand">
+			<div class="mult_res">/</div>
+			<input type="text" name="second_operand">
+			<input type="submit">
+		</form>
+		<hr>
+		<form id="div" method="POST">
+			{% csrf_token %}
+			<input type="text" name="first_operand">
+			<div class="div_res">*</div>
+			<input type="text" name="second_operand">
+			<input type="submit">
+		</form>
+		<hr>
+	</main>
+</body>
+</html>

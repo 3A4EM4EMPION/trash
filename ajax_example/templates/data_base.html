@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/jquery.js" %}"></script>
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/data_base.js" %}"></script>
+</head>
+<body>
+	<select id="country" method="GET">
+		<option disabled>Страна</option>
+	</select>
+	<select id="region" method="GET">
+		<option disabled>Район</option>
+	</select>
+	<select id="city" method="GET">
+		<option disabled>Город</option>
+	</select>
+</body>
+</html>

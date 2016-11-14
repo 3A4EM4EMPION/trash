@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block login %}
+  <div class="modal" id="login">
+        <div class="modal-container">
+          <h2>LOG IN</h2>
+          <hr>
+          <form id="login">
+            {% csrf_token %}
+            <div>
+              <input type="text" name="login" placeholder="login">
+            </div>
+            <div>
+              <input type="password" name="pass" placeholder="password">
+            </div>
+            <div class="modal-error-login">
+              <label></label>
+            </div>
+            <div>
+              <input type="submit" name="auth-submit" value="LOG IN">
+            </div>
+          </form>
+            <a href="#modal-close">Close</a>
+        </div>
+    </div>
+{% endblock login %}

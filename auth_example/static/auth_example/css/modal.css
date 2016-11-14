@@ -1,0 +1,113 @@
+.modal {
+    background: rgba(235, 235, 235, 1);
+    left: 50%;
+    margin: -250px 0 0 -40%;
+    position: absolute;
+    top: -50%;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 3px 7px rgba(0,0,0,.25);
+}
+
+.modal-container {
+    z-index: 1000;
+    position: fixed;
+    background-color: rgba(55, 55, 55, 1);
+    border: 1px solid #000;
+    width: 70%;
+    max-width: 400px;
+    left: 50%;
+    padding: 20px;
+    
+    -webkit-transform: translate(-50%, -200%);
+    -ms-transform: translate(-50%, -200%);
+    transform: translate(-50%, -200%);
+
+    -webkit-transition: -webkit-transform 200ms ease-out;
+    transition: transform 200ms ease-out;
+}
+
+.modal:before {
+    content: "";
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,.8);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100% 
+}
+
+.modal:target:before {
+    display: block;
+}
+
+.modal:target .modal-container {
+    top: 20%;
+    
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.modal-container h2{
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.modal-container a{
+    margin-top: 15px;
+    float: right;
+    text-decoration: none;
+    border: 1px solid rgba(242, 108, 79, 1);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(242, 108, 79, 1);
+    padding: 5px 15px;
+    
+}
+
+.modal-container div{
+    margin-top: 15px;
+}
+
+.modal-container hr{
+    background-color: rgba(71, 71, 71, 1);
+}
+
+.modal-container input[type="text"],
+input[type="password"],
+input[type="email"]{
+    font-size: 1em;
+    background-color: rgba(55, 55, 55, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: none;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 1);
+
+}
+
+.modal-container input[type="submit"]{
+    border-radius: none;
+    border: 1px solid rgba(242, 108, 79, 1);
+    background-color: rgba(55, 55, 55, 1);
+    color: rgba(242, 108, 79, 1);
+    padding: 5px 15px;
+    width: ;
+}
+
+.modal-container input[type="submit"]:hover{
+    background-color: rgba(242, 108, 79, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.modal-container input:focus:required:invalid{
+    border: 1px solid red;
+}
+.modal-container input:focus:required:valid{
+    border: 1px solid green;
+}
+
+@media screen and (max-width: 640px){
+}

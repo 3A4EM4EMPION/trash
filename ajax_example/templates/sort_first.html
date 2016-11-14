@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SORT</title>
+	<link rel="stylesheet" type="text/css" href="{%static "/ajax_example/css/sort_first_style.css"%}">
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/jquery.js" %}"></script>
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/sort_first.js" %}"></script>
+</head>
+<body>
+	<div class="btns">
+		<input type="button" value="1-5  " class="button1">
+		<input type="button" value="6-10 " class="button2">
+		<input type="button" value="11-15" class="button3">
+	</div>
+	<div class="wrapper">
+		<h3>RESULT</h3>
+		<ol class="result">
+		</ol>
+	</div>
+</body>
+</html>

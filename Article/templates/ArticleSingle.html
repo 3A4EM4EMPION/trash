@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block articles_block %}
+
+	<h3>{{ article.article_date }}</h1>
+	<h1>{{ article.article_title }}</h1>
+	<p>{{ article.article_text }}</p>
+	<div>{{ article.article_likes }}</div>
+
+	{% for comment in comments  %}
+		<br>
+		<p>{{ comment.text }}</p>
+		<h3>{{ comment.date }}</h3>
+		<hr>
+	{% endfor %}
+
+{% endblock articles_block %}

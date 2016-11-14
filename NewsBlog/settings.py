@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Article',
+    'ajax_example',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -37,6 +38,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'ajax_example.disable.DisableCSRF',
 ]
 
 ROOT_URLCONF = 'NewsBlog.urls'
@@ -44,7 +46,12 @@ ROOT_URLCONF = 'NewsBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/Users/anton/Desktop/DJANGO/article_project/project/templates',
+            '/Users/anton/Desktop/DJANGO/article_project/Article/templates/',
+            '/Users/anton/Desktop/DJANGO/article_project/project/ajax_example/templates',
+            '/Users/anton/Desktop/DJANGO/article_project/project/auth_example/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,4 +116,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, '../static/')
 
+STATICFILES_DIRS = [
+    '/Users/anton/Desktop/DJANGO/article_project/project/Article/static/',
+    '/Users/anton/Desktop/DJANGO/article_project/project/ajax_example/static',
+    '/Users/anton/Desktop/DJANGO/article_project/project/auth_example/static',
+]

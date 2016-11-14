@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SORT SECOND</title>
+	<link rel="stylesheet" type="text/css" href="{%static "/ajax_example/css/sort_first_style.css"%}">
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/jquery.js" %}"></script>
+	<script defer type="text/javascript" src="{% static "/ajax_example/js/sort_second.js" %}"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<form class="sort" method="GET">
+			<select class="customers">
+				<option value="all" disabled>Customer</option>
+			</select>
+			<input type="submit" name="search">
+		</form>
+		<table class="result">
+			<tr>
+				<th>ID</th>
+				<th>PRODUCT</th>
+				<th>QUANTITY</th>
+				<th>CUSTOMER</th>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

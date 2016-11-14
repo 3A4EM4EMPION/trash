@@ -1,0 +1,59 @@
+/********FLUID GRID*******/
+.container {
+	width: 100%;
+}
+
+.container .cols{
+	float: left;
+	margin-bottom: 0.5em;/*11px maket*/
+	padding-right: 0.5em;  /*20px maket*/
+}
+
+.container .cols.col-1  {width: 7.3333333332%;}
+.container .cols.col-2  {width: 15.666666667%;}
+.container .cols.col-3  {width: 24%;}
+.container .cols.col-4  {width: 32.333333332%;}
+.container .cols.col-5  {width: 40.666666667%;}
+.container .cols.col-6  {width: 49%;}
+.container .cols.col-7  {width: 57.333333332%;}
+.container .cols.col-8  {width: 65.666666666%;}
+.container .cols.col-9  {width: 74%;}
+.container .cols.col-10 {width: 82.333333333%;}
+.container .cols.col-11 {width: 90.666666666;}
+.container .cols.col-12 {width: 99%;}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+	content: "";
+	display: table;
+}
+
+.container:after,
+.row:after,
+.clear:after {
+	clear: both;
+}
+
+/********MOBILE*******/
+
+@media screen and (max-width: 640px) {
+
+.container .cols.col-1,
+.container .cols.col-2,
+.container .cols.col-3,
+.container .cols.col-4,
+.container .cols.col-5,
+.container .cols.col-6,
+.container .cols.col-7,
+.container .cols.col-8,
+.container .cols.col-9,
+.container .cols.col-10,
+.container .cols.col-11,
+.container .cols.col-12 {width: 100%;}
+
+}
+
