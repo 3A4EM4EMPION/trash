@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
 from django.contrib import auth
 from django.contrib.auth.models import User
+from auth_example.models import CustomUser
 
 
 def render_page(request):
@@ -34,7 +35,7 @@ def user_signup(request):
 	if request.is_ajax():
 		users_data = {}
 		users_data['password'] = request.GET.get('password', None)
-		users_data['login'] = request.GET.get('login', None)
+		users_data['username'] = request.GET.get('login', None)
 		users_data['email'] = request.GET.get('email', None)
 
 		users_data['first_name'] = request.GET.get('firstName', None)
@@ -44,6 +45,7 @@ def user_signup(request):
 		users_data['sex'] = request.GET.get('sex', None)
 
 		new_user = User.objects.create_user(users_data)
+		# new_user = CustomUser(users_data)
 		if new_user is not None:
 			new_user.save()
 			return HttpResponse('1')

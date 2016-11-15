@@ -4,6 +4,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+# def rel(*path):
+	# return os.path.join(os.path.abspath(os.path.dirname(__file__), path))
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -28,7 +32,6 @@ INSTALLED_APPS = [
     'debug_toolbar',  # debug tools
     'Article',
     'ajax_example',
-
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -126,3 +129,6 @@ STATICFILES_DIRS = [
     '/Users/anton/Desktop/DJANGO/article_project/project/ajax_example/static',
     '/Users/anton/Desktop/DJANGO/article_project/project/auth_example/static',
 ]
+
+
+# AUTH_USER_MODEL = 'auth_example.models'
